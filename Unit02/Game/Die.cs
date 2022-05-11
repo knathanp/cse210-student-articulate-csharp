@@ -3,9 +3,6 @@ using System;
 
 namespace Unit02.Game
 {
-    // TODO: Implement the Die class as follows...
-    // 1) Add the class declaration. Use the following class comment.
-
     /// <summary>
     /// A small cube with a different number of spots on each of its six sides.
     /// 
@@ -14,7 +11,9 @@ namespace Unit02.Game
     /// </summary> 
     public class Die
     {
-        // 2) Create the class constructor. Use the following method comment.
+
+        public int value;
+        public int points;
 
         /// <summary>
         /// Constructs a new instance of Die.
@@ -24,8 +23,6 @@ namespace Unit02.Game
             value = 0;
             points = 0;
         }
-
-        // 3) Create the Roll() method. Use the following method comment.
 
         /// <summary>
         /// Generates a new random value and calculates the points for the die. Fives are 
@@ -43,16 +40,5 @@ namespace Unit02.Game
             else
                 points = 0;
         }
-
-        /// <summary>
-        /// Currently rolled value.
-        /// </summary>
-        public int value;
-
-        /// <summary>
-        /// The points this value is worth.
-        /// </summary>
-        public int points;
-
     }
 }
