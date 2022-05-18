@@ -25,8 +25,7 @@ namespace Unit03.Game
         /// </summary>
         public Seeker()
         {
-            Random random = new Random();
-            _location = random.Next(1001);
+
         }
 
 
