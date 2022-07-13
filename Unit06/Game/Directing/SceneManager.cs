@@ -79,7 +79,7 @@ namespace Unit06.Game.Directing
             AddBall(cast);
             AddBricks(cast);
             AddRacket(cast);
-            AddDialog(cast, Constants.PREP_TO_LAUNCH);
+            AddDialog(cast, "Hello, I am the Next_Level Scene");
 
             script.ClearAllActions();
 
@@ -245,6 +245,19 @@ namespace Unit06.Game.Directing
             Racket racket = new Racket(body, animation, false);
         
             cast.AddActor(Constants.RACKET_GROUP, racket);
+        
+            int x2 = Constants.CENTER_X + Constants.RACKET_WIDTH / 2;
+            int y2 = Constants.SCREEN_HEIGHT - Constants.RACKET_HEIGHT;
+        
+            Point position2 = new Point(x2, y2);
+            Point size2 = new Point(Constants.RACKET_WIDTH, Constants.RACKET_HEIGHT);
+            Point velocity2 = new Point(0, 0);
+        
+            Body body2 = new Body(position2, size2, velocity2);
+            Animation animation2 = new Animation(Constants.RACKET_IMAGES, Constants.RACKET_RATE, 0);
+            Racket racket2 = new Racket(body2, animation2, false);
+        
+            cast.AddActor(Constants.RACKET_GROUP, racket2);
         }
 
         private void AddScore(Cast cast)

@@ -49,9 +49,15 @@ namespace Unit06
         // KEYS
         public static string LEFT = "left";
         public static string RIGHT = "right";
+        public static string DOWN = "down";
+        public static string UP = "up";
         public static string SPACE = "space";
         public static string ENTER = "enter";
         public static string PAUSE = "p";
+        public static string A = "a";
+        public static string D = "d";
+        public static string S = "s";
+        public static string W = "w";
 
         // SCENES
         public static string NEW_GAME = "new_game";

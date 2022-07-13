@@ -8,7 +8,7 @@ namespace Unit06.Game.Scripting
     {
         private AudioService audioService;
         private PhysicsService physicsService;
-        
+
         public CollideRacketAction(PhysicsService physicsService, AudioService audioService)
         {
             this.physicsService = physicsService;
@@ -18,15 +18,18 @@ namespace Unit06.Game.Scripting
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
             Ball ball = (Ball)cast.GetFirstActor(Constants.BALL_GROUP);
-            Racket racket = (Racket)cast.GetFirstActor(Constants.RACKET_GROUP);
             Body ballBody = ball.GetBody();
-            Body racketBody = racket.GetBody();
 
-            if (physicsService.HasCollided(racketBody, ballBody))
+            foreach (Racket racket in cast.GetActors(Constants.RACKET_GROUP))
             {
-                ball.BounceY();
-                Sound sound = new Sound(Constants.BOUNCE_SOUND);
-                audioService.PlaySound(sound);
+                Body racketBody = racket.GetBody();
+
+                if (physicsService.HasCollided(racketBody, ballBody))
+                {
+                    ball.BounceY();
+                    Sound sound = new Sound(Constants.BOUNCE_SOUND);
+                    audioService.PlaySound(sound);
+                }
             }
         }
     }

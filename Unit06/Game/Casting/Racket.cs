@@ -64,6 +64,24 @@ namespace Unit06.Game.Casting
             body.SetVelocity(velocity);
         }
 
+                /// <summary>
+        /// Swings the racket to the up.
+        /// </summary>
+        public void SwingUp()
+        {
+            Point velocity = new Point(0, -Constants.RACKET_VELOCITY);
+            body.SetVelocity(velocity);
+        }
+
+        /// <summary>
+        /// Swings the racket to the down.
+        /// </summary>
+        public void SwingDown()
+        {
+            Point velocity = new Point(0, Constants.RACKET_VELOCITY);
+            body.SetVelocity(velocity);
+        }
+
         /// <summary>
         /// Stops the racket from moving.
         /// </summary>
