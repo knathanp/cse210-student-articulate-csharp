@@ -81,6 +81,10 @@ namespace Unit04.Game.Casting
         {
             int x = ((position.GetX() + velocity.GetX()) + maxX) % maxX;
             int y = ((position.GetY() + velocity.GetY()) + maxY) % maxY;
+#if DEBUG
+            Console.WriteLine($"({x},{y})");
+            this.text = $"{(position.GetX(), position.GetY())}";
+#endif
             position = new Point(x, y);
         }
 
