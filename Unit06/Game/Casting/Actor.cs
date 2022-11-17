@@ -15,7 +15,7 @@ namespace Unit06.Game.Casting
         /// </summary>
         public Actor(bool debug)
         {
-            this._debug = debug;
+            _debug = debug;
         }
 
         /// <summary>
@@ -23,10 +23,10 @@ namespace Unit06.Game.Casting
         /// </summary>
         public Actor(Point position, Point size, Point velocity, bool debug)
         {
-            this._position = position;
-            this._size = size;
-            this._velocity = velocity;
-            this._debug = debug;
+            _position = position;
+            _size = size;
+            _velocity = velocity;
+            _debug = debug;
         }
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace Unit06.Game.Casting
         /// <param name="position">The given position.</param>
         public void SetPosition(Point position)
         {
-            this._position = position;
+            _position = position;
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Unit06.Game.Casting
         /// <param name="size">The given size.</param>
         public void SetSize(Point size)
         {
-            this._size = size;
+            _size = size;
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Unit06.Game.Casting
         /// <param name="velocity">The given velocity.</param>
         public void SetVelocity(Point velocity)
         {
-            this._velocity = velocity;
+            _velocity = velocity;
         }
     }
 }

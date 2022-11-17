@@ -22,10 +22,10 @@ namespace Unit06.Game.Services
         
         public RaylibVideoService(string title, int width, int height, Casting.Color color)
         {
-            this._title = title;
-            this._width = width;
-            this._height = height;
-            this._color = color;
+            _title = title;
+            _width = width;
+            _height = height;
+            _color = color;
         }
         /// </inheritdoc>
         public void ClearBuffer()

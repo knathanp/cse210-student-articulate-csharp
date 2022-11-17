@@ -13,8 +13,8 @@ namespace Unit06.Game.Casting
         /// </summary>
         public Rectangle(Point position, Point size)
         {
-            this._position = position;
-            this._size = size;
+            _position = position;
+            _size = size;
         }
 
         /// <summary>

@@ -19,8 +19,8 @@ namespace Unit06.Game.Casting
         /// <param name="y">The given y value.</param>
         public Point(int x, int y)
         {
-            this._x = x;
-            this._y = y;
+            _x = x;
+            _y = y;
         }
 
         /// <summary>
@@ -30,8 +30,8 @@ namespace Unit06.Game.Casting
         /// <returns>The sum as a new Point.</returns>
         public Point Add(Point other)
         {
-            int x = this._x + other.GetX();
-            int y = this._y + other.GetY();
+            int x = _x + other.GetX();
+            int y = _y + other.GetY();
             return new Point(x, y);
         }
 
@@ -42,7 +42,7 @@ namespace Unit06.Game.Casting
         /// <returns>True if both x and y are equal; false if otherwise.</returns>
         public bool Equals(Point other)
         {
-            return this._x == other.GetX() && this._y == other.GetY();
+            return _x == other.GetX() && _y == other.GetY();
         }
 
         /// <summary>
@@ -69,8 +69,8 @@ namespace Unit06.Game.Casting
         /// <returns>A new point that is reversed.</returns>
         public Point Reverse()
         {
-            int x = this._x * -1;
-            int y = this._y * -1;
+            int x = _x * -1;
+            int y = _y * -1;
             return new Point(x, y);
         }
         
@@ -81,8 +81,8 @@ namespace Unit06.Game.Casting
         /// <returns>A scaled instance of Point.</returns>
         public Point Scale(int factor)
         {
-            int x = this._x * factor;
-            int y = this._y * factor;
+            int x = _x * factor;
+            int y = _y * factor;
             return new Point(x, y);
         }
     }

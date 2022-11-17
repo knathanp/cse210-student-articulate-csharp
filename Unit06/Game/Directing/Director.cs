@@ -22,10 +22,10 @@ namespace Unit06.Game.Directing
         /// <param name="videoService">The given VideoService.</param>
         public Director(VideoService videoService)
         {
-            this._videoService = videoService;
-            this._cast = new Cast();
-            this._script = new Script();
-            this._sceneManager = new SceneManager();
+            _videoService = videoService;
+            _cast = new Cast();
+            _script = new Script();
+            _sceneManager = new SceneManager();
         }
 
         /// </inheritdoc>

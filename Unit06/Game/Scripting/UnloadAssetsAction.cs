@@ -11,8 +11,8 @@ namespace Unit06.Game.Scripting
         
         public UnloadAssetsAction(AudioService audioService, VideoService videoService)
         {
-            this._audioService = audioService;
-            this._videoService = videoService;
+            _audioService = audioService;
+            _videoService = videoService;
         }
 
         public void Execute(Cast cast, Script script, ActionCallback callback)

@@ -13,9 +13,9 @@ namespace Unit06.Game.Scripting
         
         public TimedChangeSceneAction(string nextScene, double delay, DateTime start)
         {
-            this._nextScene = nextScene;
-            this._delay = delay;
-            this._start = start;
+            _nextScene = nextScene;
+            _delay = delay;
+            _start = start;
         }
 
         public void Execute(Cast cast, Script script, ActionCallback callback)

@@ -11,8 +11,8 @@ namespace Unit06.Game.Scripting
 
         public PlaySoundAction(AudioService audioService, string filename)
         {
-            this._audioService = audioService;
-            this._filename = filename;
+            _audioService = audioService;
+            _filename = filename;
         }
 
         public void Execute(Cast cast, Script script, ActionCallback callback)

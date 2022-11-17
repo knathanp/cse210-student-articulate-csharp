@@ -11,8 +11,8 @@ namespace Unit06.Game.Scripting
         
         public CollideRacketAction(PhysicsService physicsService, AudioService audioService)
         {
-            this._physicsService = physicsService;
-            this._audioService = audioService;
+            _physicsService = physicsService;
+            _audioService = audioService;
         }
 
         public void Execute(Cast cast, Script script, ActionCallback callback)

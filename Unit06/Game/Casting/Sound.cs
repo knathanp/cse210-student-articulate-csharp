@@ -14,9 +14,9 @@ namespace Unit06.Game.Casting
         /// </summary>
         public Sound(string filename, int volume = 1, bool repeated = false)
         {
-            this._filename = filename;
-            this._volume = volume;
-            this._repeated = repeated;
+            _filename = filename;
+            _volume = volume;
+            _repeated = repeated;
         }
 
         /// <summary>

@@ -11,8 +11,8 @@ namespace Unit06.Game.Scripting
 
         public ChangeSceneAction(KeyboardService keyboardService, string nextScene)
         {
-            this._keyboardService = keyboardService;
-            this._nextScene = nextScene;
+            _keyboardService = keyboardService;
+            _nextScene = nextScene;
         }
 
         public void Execute(Cast cast, Script script, ActionCallback callback)

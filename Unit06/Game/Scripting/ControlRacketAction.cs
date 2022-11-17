@@ -10,7 +10,7 @@ namespace Unit06.Game.Scripting
 
         public ControlRacketAction(KeyboardService keyboardService)
         {
-            this._keyboardService = keyboardService;
+            _keyboardService = keyboardService;
         }
 
         public void Execute(Cast cast, Script script, ActionCallback callback)

@@ -13,7 +13,7 @@ namespace Unit06.Game.Casting
         public Racket(Animation animation, Point position, Point size, Point velocity, bool debug)
         : base(position, size, velocity, debug)
         {
-            this._animation = animation;
+            _animation = animation;
         }
 
         /// <summary>

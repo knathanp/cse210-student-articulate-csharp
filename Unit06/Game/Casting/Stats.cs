@@ -15,9 +15,9 @@ namespace Unit06.Game.Casting
         public Stats(int level = 1, int lives = 3, int score = 0, 
                 bool debug = false) : base(debug)
         {
-            this._level = level;
-            this._lives = lives;
-            this._score = score;
+            _level = level;
+            _lives = lives;
+            _score = score;
         }
 
         /// <summary>

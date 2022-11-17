@@ -14,9 +14,9 @@ namespace Unit06.Game.Casting
         /// </summary>
         public Image(string filename, double scale = 1.0, int rotation = 0)
         {
-            this._filename = filename;
-            this._scale = scale;
-            this._rotation = rotation;
+            _filename = filename;
+            _scale = scale;
+            _rotation = rotation;
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Unit06.Game.Casting
         /// <param name="rotation">The given rotation.</param>
         public void SetRotation(int rotation)
         {
-            this._rotation = rotation;
+            _rotation = rotation;
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace Unit06.Game.Casting
         /// <param name="scale">The given scale.</param>
         public void SetScale(double scale)
         {
-            this._scale = scale;
+            _scale = scale;
         }
         
     }

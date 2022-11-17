@@ -18,7 +18,7 @@ namespace Unit06.Game.Casting
         public Ball(Image image, Point position, Point size, Point velocity, bool debug = false) 
         : base(position, size, velocity, debug)
         {
-            this._image = image;
+            _image = image;
         }
 
         /// <summary>

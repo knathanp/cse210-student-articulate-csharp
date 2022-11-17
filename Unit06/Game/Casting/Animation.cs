@@ -21,12 +21,12 @@ namespace Unit06.Game.Casting
         /// </summary>
         public Animation(List<string> images, int rate, int delay)
         {
-            this._images = images;
-            this._rate = rate;
-            this._delay = new TimeSpan(0, 0, delay);
-            this._index = 0;
-            this._frame = 0;
-            this._startTime = DateTime.Now;
+            _images = images;
+            _rate = rate;
+            _delay = new TimeSpan(0, 0, delay);
+            _index = 0;
+            _frame = 0;
+            _startTime = DateTime.Now;
         }
 
         /// <summary>

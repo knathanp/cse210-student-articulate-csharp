@@ -12,15 +12,15 @@ namespace Unit06.Game.Casting
         private Color _color;
 
         /// <summary>
-        /// Constructs a new instance of Actor.
+        /// Constructs a new instance of Text.
         /// </summary>
         public Text(string value, string fontFile, int size, int alignment, Color color)
         {
-            this._value = value;
-            this._fontFile = fontFile;
-            this._size = size;
-            this._alignment = alignment;
-            this._color = color;
+            _value = value;
+            _fontFile = fontFile;
+            _size = size;
+            _alignment = alignment;
+            _color = color;
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Unit06.Game.Casting
         /// <param name="value">The given value.</param>
         public void SetValue(string value)
         {
-            this._value = value;
+            _value = value;
         }
     }
 }

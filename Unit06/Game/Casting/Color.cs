@@ -15,10 +15,10 @@ namespace Unit06.Game.Casting
         /// </summary>
         public Color(int red, int green, int blue, int alpha = 255)
         {
-            this._red = red;
-            this._green = green;
-            this._blue = blue;
-            this._alpha = alpha;
+            _red = red;
+            _green = green;
+            _blue = blue;
+            _alpha = alpha;
         }
 
         /// <summary>

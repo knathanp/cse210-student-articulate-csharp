@@ -11,7 +11,7 @@ namespace Unit06.Game.Scripting
         
         public EndDrawingAction(VideoService videoService)
         {
-            this._videoService = videoService;
+            _videoService = videoService;
         }
 
         public void Execute(Cast cast, Script script, ActionCallback callback)
