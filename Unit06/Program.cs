@@ -8,7 +8,7 @@ namespace Unit06
     {
         static void Main(string[] args)
         {
-            Director director = new Director(SceneManager.VideoService);
+            Director director = new Director();
             director.StartGame();
         }
     }

@@ -21,6 +21,11 @@ namespace Unit06.Game.Directing
         {
         }
 
+        public bool IsWindowOpen()
+        {
+            return VideoService.IsWindowOpen();
+        }
+
         public void PrepareScene(string scene, Cast cast, Script script)
         {
             if (scene == Constants.NEW_GAME)

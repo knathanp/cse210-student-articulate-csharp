@@ -14,15 +14,13 @@ namespace Unit06.Game.Directing
         private Cast _cast;
         private Script _script;
         private SceneManager _sceneManager;
-        private VideoService _videoService;
         
         /// <summary>
         /// Constructs a new instance of Director using the given VideoService.
         /// </summary>
         /// <param name="videoService">The given VideoService.</param>
-        public Director(VideoService videoService)
+        public Director()
         {
-            _videoService = videoService;
             _cast = new Cast();
             _script = new Script();
             _sceneManager = new SceneManager();
@@ -42,7 +40,7 @@ namespace Unit06.Game.Directing
             OnNext(Constants.NEW_GAME);
             ExecuteActions(Constants.INITIALIZE);
             ExecuteActions(Constants.LOAD);
-            while (_videoService.IsWindowOpen())
+            while (_sceneManager.IsWindowOpen())
             {
                 ExecuteActions(Constants.INPUT);
                 ExecuteActions(Constants.UPDATE);
