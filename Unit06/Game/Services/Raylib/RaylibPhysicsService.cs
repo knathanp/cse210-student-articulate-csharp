@@ -8,14 +8,14 @@ namespace Unit06.Game.Services
     public class RaylibPhysicsService : PhysicsService
     {
         /// </inheritdoc>
-        public bool HasCollided(Body subject, Body agent)
+        public bool HasCollided(Actor subject, Actor agent)
         {
             Raylib_cs.Rectangle subjectRectangle = ToRectangle(subject);
             Raylib_cs.Rectangle agentRectangle = ToRectangle(agent);
             return Raylib.CheckCollisionRecs(subjectRectangle, agentRectangle);
         }
 
-        public Raylib_cs.Rectangle ToRectangle(Body body)
+        public Raylib_cs.Rectangle ToRectangle(Actor body)
         {
             int x = body.GetPosition().GetX();
             int y = body.GetPosition().GetY();

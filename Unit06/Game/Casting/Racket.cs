@@ -5,15 +5,14 @@ namespace Unit06.Game.Casting
     /// </summary>
     public class Racket : Actor
     {
-        private Body _body;
         private Animation _animation;
-        
+
         /// <summary>
         /// Constructs a new instance of Actor.
         /// </summary>
-        public Racket(Body body, Animation animation, bool debug) : base(debug)
+        public Racket(Animation animation, Point position, Point size, Point velocity, bool debug)
+        : base(position, size, velocity, debug)
         {
-            this._body = body;
             this._animation = animation;
         }
 
@@ -27,23 +26,12 @@ namespace Unit06.Game.Casting
         }
 
         /// <summary>
-        /// Gets the body.
-        /// </summary>
-        /// <returns>The body.</returns>
-        public Body GetBody()
-        {
-            return _body;
-        }
-
-        /// <summary>
         /// Moves the racket to its next position.
         /// </summary>
         public void MoveNext()
         {
-            Point position = _body.GetPosition();
-            Point velocity = _body.GetVelocity();
-            Point newPosition = position.Add(velocity);
-            _body.SetPosition(newPosition);
+            Point newPosition = _position.Add(_velocity);
+            SetPosition(newPosition);
         }
 
         /// <summary>
@@ -51,8 +39,7 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void SwingLeft()
         {
-            Point velocity = new Point(-Constants.RACKET_VELOCITY, 0);
-            _body.SetVelocity(velocity);
+            _velocity = new Point(-Constants.RACKET_VELOCITY, 0);
         }
 
         /// <summary>
@@ -60,8 +47,7 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void SwingRight()
         {
-            Point velocity = new Point(Constants.RACKET_VELOCITY, 0);
-            _body.SetVelocity(velocity);
+            _velocity = new Point(Constants.RACKET_VELOCITY, 0);
         }
 
         /// <summary>
@@ -69,9 +55,8 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void StopMoving()
         {
-            Point velocity = new Point(0, 0);
-            _body.SetVelocity(velocity);
+            _velocity = new Point(0, 0);
         }
-        
+
     }
 }

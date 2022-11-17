@@ -10,16 +10,14 @@ namespace Unit06.Game.Casting
     public class Ball : Actor
     {
         private static Random _random = new Random();
-
-        private Body _body;
         private Image _image;
 
         /// <summary>
         /// Constructs a new instance of Actor.
         /// </summary>
-        public Ball(Body body, Image image, bool debug = false) : base(debug)
+        public Ball(Image image, Point position, Point size, Point velocity, bool debug = false) 
+        : base(position, size, velocity, debug)
         {
-            this._body = body;
             this._image = image;
         }
 
@@ -28,12 +26,10 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void BounceX()
         {
-            Point velocity = _body.GetVelocity();
             double rn = (_random.NextDouble() * (1.2 - 0.8) + 0.8);
-            double vx = velocity.GetX() * -1;
-            double vy = velocity.GetY();
-            Point newVelocity = new Point((int)vx, (int)vy);
-            _body.SetVelocity(newVelocity);
+            double vx = _velocity.GetX() * -1;
+            double vy = _velocity.GetY();
+            _velocity = new Point((int)vx, (int)vy);
         }
 
         /// <summary>
@@ -41,21 +37,10 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void BounceY()
         {
-            Point velocity = _body.GetVelocity();
             double rn = (_random.NextDouble() * (1.2 - 0.8) + 0.8);
-            double vx = velocity.GetX();
-            double vy = velocity.GetY() * -1;
-            Point newVelocity = new Point((int)vx, (int)vy);
-            _body.SetVelocity(newVelocity);
-        }
-        
-        /// <summary>
-        /// Gets the body.
-        /// </summary>
-        /// <returns>The body.</returns>
-        public Body GetBody()
-        {
-            return _body;
+            double vx = _velocity.GetX();
+            double vy = _velocity.GetY() * -1;
+            _velocity = new Point((int)vx, (int)vy);
         }
 
         /// <summary>
@@ -72,13 +57,11 @@ namespace Unit06.Game.Casting
         /// </summary>
         public void Release()
         {
-            Point velocity = _body.GetVelocity();
-            List<int> velocities = new List<int> {Constants.BALL_VELOCITY, Constants.BALL_VELOCITY};
+            List<int> velocities = new List<int> { Constants.BALL_VELOCITY, Constants.BALL_VELOCITY };
             int index = _random.Next(velocities.Count);
             double vx = velocities[index];
             double vy = -Constants.BALL_VELOCITY;
-            Point newVelocity = new Point((int)vx, (int)vy);
-            _body.SetVelocity(newVelocity);
+            _velocity = new Point((int)vx, (int)vy);
         }
     }
 }

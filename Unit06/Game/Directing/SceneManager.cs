@@ -151,9 +151,8 @@ namespace Unit06.Game.Directing
             Point size = new Point(Constants.BALL_WIDTH, Constants.BALL_HEIGHT);
             Point velocity = new Point(0, 0);
         
-            Body body = new Body(position, size, velocity);
             Image image = new Image(Constants.BALL_IMAGE);
-            Ball ball = new Ball(body, image, false);
+            Ball ball = new Ball(image, position, size, velocity, false);
         
             cast.AddActor(Constants.BALL_GROUP, ball);
         }
@@ -183,10 +182,8 @@ namespace Unit06.Game.Directing
                     Point velocity = new Point(0, 0);
                     List<string> images = Constants.BRICK_IMAGES[color].GetRange(0, frames);
 
-                    Body body = new Body(position, size, velocity);
                     Animation animation = new Animation(images, Constants.BRICK_RATE, 1);
-                    
-                    Brick brick = new Brick(body, animation, points, false);
+                    Brick brick = new Brick(animation, points, position, size, velocity, false);
                     cast.AddActor(Constants.BRICK_GROUP, brick);
                 }
             }
@@ -239,10 +236,9 @@ namespace Unit06.Game.Directing
             Point position = new Point(x, y);
             Point size = new Point(Constants.RACKET_WIDTH, Constants.RACKET_HEIGHT);
             Point velocity = new Point(0, 0);
-        
-            Body body = new Body(position, size, velocity);
+
             Animation animation = new Animation(Constants.RACKET_IMAGES, Constants.RACKET_RATE, 0);
-            Racket racket = new Racket(body, animation, false);
+            Racket racket = new Racket(animation, position, size, velocity, false);
         
             cast.AddActor(Constants.RACKET_GROUP, racket);
         }

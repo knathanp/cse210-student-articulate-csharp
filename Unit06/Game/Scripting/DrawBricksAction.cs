@@ -20,11 +20,10 @@ namespace Unit06.Game.Scripting
             foreach (Actor actor in bricks)
             {
                 Brick brick = (Brick)actor;
-                Body body = brick.GetBody();
 
                 if (brick.IsDebug())
                 {
-                    Rectangle rectangle = body.GetRectangle();
+                    Rectangle rectangle = brick.GetRectangle();
                     Point size = rectangle.GetSize();
                     Point pos = rectangle.GetPosition();
                     _videoService.DrawRectangle(size, pos, Constants.PURPLE, false);
@@ -32,7 +31,7 @@ namespace Unit06.Game.Scripting
 
                 Animation animation = brick.GetAnimation();
                 Image image = animation.NextImage();
-                Point position = body.GetPosition();
+                Point position = brick.GetPosition();
                 _videoService.DrawImage(image, position);
             }
         }

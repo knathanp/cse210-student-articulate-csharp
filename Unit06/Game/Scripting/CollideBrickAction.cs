@@ -22,13 +22,10 @@ namespace Unit06.Game.Scripting
             List<Actor> bricks = cast.GetActors(Constants.BRICK_GROUP);
             Stats stats = (Stats)cast.GetFirstActor(Constants.STATS_GROUP);
             
-            foreach (Actor actor in bricks)
+            foreach (Brick brick in bricks)
             {
-                Brick brick = (Brick)actor;
-                Body brickBody = brick.GetBody();
-                Body ballBody = ball.GetBody();
 
-                if (_physicsService.HasCollided(brickBody, ballBody))
+                if (_physicsService.HasCollided(brick, ball))
                 {
                     ball.BounceY();
                     Sound sound = new Sound(Constants.BOUNCE_SOUND);

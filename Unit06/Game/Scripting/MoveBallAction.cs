@@ -10,11 +10,10 @@ namespace Unit06.Game.Scripting
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
             Ball ball = (Ball)cast.GetFirstActor(Constants.BALL_GROUP);
-            Body body = ball.GetBody();
-            Point position = body.GetPosition();
-            Point velocity = body.GetVelocity();
+            Point position = ball.GetPosition();
+            Point velocity = ball.GetVelocity();
             position = position.Add(velocity);
-            body.SetPosition(position);
+            ball.SetPosition(position);
         }
     }
 }

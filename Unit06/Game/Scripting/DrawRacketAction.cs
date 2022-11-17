@@ -16,11 +16,10 @@ namespace Unit06.Game.Scripting
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
             Racket racket = (Racket)cast.GetFirstActor(Constants.RACKET_GROUP);
-            Body body = racket.GetBody();
 
             if (racket.IsDebug())
             {
-                Rectangle rectangle = body.GetRectangle();
+                Rectangle rectangle = racket.GetRectangle();
                 Point size = rectangle.GetSize();
                 Point pos = rectangle.GetPosition();
                 _videoService.DrawRectangle(size, pos, Constants.PURPLE, false);
@@ -28,7 +27,7 @@ namespace Unit06.Game.Scripting
 
             Animation animation = racket.GetAnimation();
             Image image = animation.NextImage();
-            Point position = body.GetPosition();
+            Point position = racket.GetPosition();
             _videoService.DrawImage(image, position);
         }
     }

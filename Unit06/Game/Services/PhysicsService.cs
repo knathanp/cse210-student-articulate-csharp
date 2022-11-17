@@ -11,6 +11,6 @@ namespace Unit06.Game.Services
         /// <param name="subject">The first body.</param>
         /// <param name="agent">The second body.</param>
         /// <returns></returns>
-        bool HasCollided(Body subject, Body agent);
+        bool HasCollided(Actor subject, Actor agent);
     }
 }

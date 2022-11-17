@@ -11,9 +11,8 @@ namespace Unit06.Game.Scripting
         public void Execute(Cast cast, Script script, ActionCallback callback)
         {
             Racket racket = (Racket)cast.GetFirstActor(Constants.RACKET_GROUP);
-            Body body = racket.GetBody();
-            Point position = body.GetPosition();
-            Point velocity = body.GetVelocity();
+            Point position = racket.GetPosition();
+            Point velocity = racket.GetVelocity();
             int x = position.GetX();
 
             position = position.Add(velocity);
@@ -27,7 +26,7 @@ namespace Unit06.Game.Scripting
                     position.GetY());
             }
 
-            body.SetPosition(position);       
+            racket.SetPosition(position);       
         }
     }
 }

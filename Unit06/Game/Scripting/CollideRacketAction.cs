@@ -19,10 +19,8 @@ namespace Unit06.Game.Scripting
         {
             Ball ball = (Ball)cast.GetFirstActor(Constants.BALL_GROUP);
             Racket racket = (Racket)cast.GetFirstActor(Constants.RACKET_GROUP);
-            Body ballBody = ball.GetBody();
-            Body racketBody = racket.GetBody();
 
-            if (_physicsService.HasCollided(racketBody, ballBody))
+            if (_physicsService.HasCollided(racket, ball))
             {
                 ball.BounceY();
                 Sound sound = new Sound(Constants.BOUNCE_SOUND);
