@@ -263,7 +263,7 @@ namespace Unit06.Game.Directing
         private void AddStats(Cast cast)
         {
             cast.ClearActors(Constants.STATS_GROUP);
-            Stats stats = new Stats();
+            Stats stats = new Stats(1, Constants.DEFAULT_LIVES);
             cast.AddActor(Constants.STATS_GROUP, stats);
         }
 

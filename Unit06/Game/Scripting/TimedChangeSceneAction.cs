@@ -5,6 +5,9 @@ using Unit06.Game.Services;
 
 namespace Unit06.Game.Scripting
 {
+    /// <summary>
+    /// A ChangeSceneAction with a delay
+    /// </summary>
     public class TimedChangeSceneAction : Action
     {
         private string _nextScene;
