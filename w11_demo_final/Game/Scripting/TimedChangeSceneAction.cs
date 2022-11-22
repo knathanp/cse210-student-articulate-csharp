@@ -1,0 +1,34 @@
+using System;
+using Unit06.Game.Casting;
+using Unit06.Game.Services;
+
+
+namespace Unit06.Game.Scripting
+{
+    /// <summary>
+    /// A ChangeSceneAction with a delay
+    /// </summary>
+    public class TimedChangeSceneAction : Action
+    {
+        private string _nextScene;
+        private double _delay;
+        private DateTime _start;
+        
+        public TimedChangeSceneAction(string nextScene, double delay, DateTime start)
+        {
+            _nextScene = nextScene;
+            _delay = delay;
+            _start = start;
+        }
+
+        public void Execute(Cast cast, Script script, ActionCallback callback)
+        {
+            DateTime currentTime = DateTime.Now;
+            TimeSpan elapsedTime = currentTime.Subtract(_start);
+            if (elapsedTime.Seconds > _delay)
+            {
+                callback.OnNext(_nextScene);
+            }
+        }
+    }
+}
