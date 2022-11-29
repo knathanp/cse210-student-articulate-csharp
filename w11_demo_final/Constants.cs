@@ -110,7 +110,14 @@ namespace Unit06
         
         public static List<string> RACKET_IMAGES
             = new List<string>() {
-                "Assets/Images/red-box.png"
+                // "Assets/Images/red-box.png"
+                "Assets/Images/sprite_0.png",
+                "Assets/Images/sprite_1.png",
+                "Assets/Images/sprite_2.png",
+                "Assets/Images/sprite_3.png",
+                "Assets/Images/sprite_4.png",
+                "Assets/Images/sprite_5.png",
+                "Assets/Images/sprite_6.png"
             };
 
         public static int RACKET_WIDTH = 100;
